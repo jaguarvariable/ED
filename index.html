@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edgenuity</title>
+	<style type="text/css">
+		body{
+			width: 100%;
+			height: 100vh;
+			padding: 0;
+			margin: 0;
+		}
+		iframe{
+			border: 0px solid transparent;
+			z-index: 9;
+		}
+		.over{
+			position: fixed;
+			top: 0;
+			left: 0;
+			margin: 0 auto;
+			width: 100%;
+			text-align: center;
+			z-index: 10;
+		}
+	</style>
+	<script type="text/javascript">
+		function hide(){
+			var crack = document.getElementById('hideafter');
+			crack.setAttribute("style","display:none");
+		}
+		function geta(){
+			var a = document.getElementById('box').value;
+			document.getElementById('ifram').setAttribute('src', 'https://r04.core.learn.edgenuity.com/ContentViewers/AssessmentViewer/PrintActivity?learningObjectKey=e0e4d4f2-b41b-11e2-aa12-bc764e043e0c&resultKey=' + a + ' &enrollmentKey=b0441e7a-73fc-e711-80f1-005056b56bcf&sessionKey=&lessonName=Answers');
+			hide();
+		}
+		function getb(){
+			var a = document.getElementById('box').value;
+			document.getElementById('ifram').setAttribute('src','https://r04.core.learn.edgenuity.com/ContentViewers/AssessmentViewer/PrintActivity?learningObjectKey=6f9d8e65-6a62-6365-7473-000000000000&resultKey=' + a + '&enrollmentKey=0b6d3c1f-79fc-e711-80f1-005056b56bcf&sessionKey=&lessonName=Answers');
+			hide();
+		}
+	</script>
+</head>
+<body>
+	<iframe width="99%" id="ifram" height="98%" src=""></iframe>
+
+	<div id="hideafter" class="over">
+		<p>Type In Result Key Here: </p>
+		<input type="text" id="box" placeholder="Long Thingy here!">
+		<input type="submit" onclick="geta()" value="Math/Science">
+		<input type="submit" onclick="getb()" value="English/History">
+		<br>
+		<hr>
+		<u>Intructions: </u><br>
+		1. Start Quiz<br>
+		2. Right Click On it and Click Inspect<br>
+		3. Click console(near the top!)<br>
+		4. Type In ActivityKeys.resultKey<br>
+		5. Copy Code in quotes<br>
+		6. Paste it here and Select The subject!
+	</div>
+</body>
+</html>
